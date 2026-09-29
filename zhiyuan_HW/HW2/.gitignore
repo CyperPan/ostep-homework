@@ -8,3 +8,5 @@ q7
 q8
 q2.output
 a.out
+syscall
+ctxswitch
