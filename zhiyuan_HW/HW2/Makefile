@@ -1,15 +1,8 @@
-CC     := gcc
-CFLAGS := -Wall -g
-
-PROGS := q1 q2 q3 q4 q5 q6 q7 q8 syscall ctxswitch
-
-all: $(PROGS)
-
-# chapter 6 measurement programs are built with optimization
-syscall ctxswitch: CFLAGS := -Wall -O2
-
-%: %.c
-	$(CC) $(CFLAGS) -o $@ $<
+# Build all homework programs (run inside the Ubuntu VM).
+all:
+	$(MAKE) -C code/chapter5
+	$(MAKE) -C code/chapter6
 
 clean:
-	rm -f $(PROGS) q2.output a.out
+	$(MAKE) -C code/chapter5 clean
+	$(MAKE) -C code/chapter6 clean
