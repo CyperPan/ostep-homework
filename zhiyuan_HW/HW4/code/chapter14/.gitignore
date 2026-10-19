@@ -1,0 +1,8 @@
+null
+leak
+overflow
+use_after_free
+bad_free
+vector
+vgcore.*
+core
