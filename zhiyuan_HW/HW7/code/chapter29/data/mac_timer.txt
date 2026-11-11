@@ -1,0 +1,5 @@
+gettimeofday()                     smallest step    1000 ns   cost per call  11.5 ns
+clock_gettime(CLOCK_MONOTONIC)     smallest step    1000 ns   cost per call  17.9 ns
+                                   (clock_getres says 1000 ns)
+mach_absolute_time()               smallest step      41 ns   cost per call   7.8 ns
+                                   (one tick = 125/3 ns)
