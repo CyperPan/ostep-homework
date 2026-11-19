@@ -1,0 +1,41 @@
+== Q6 no-starve mutex: worst case over 3 runs
+  sem lifo lock ns  N= 2 loops=  2000: max overtakes      2 (2(N-1) =  2), max wait    0.44 ms, time 0.198 s
+  sem lifo lock ns  N= 2 loops= 20000: max overtakes      2 (2(N-1) =  2), max wait    4.02 ms, time 2.185 s
+  sem lifo lock ns  N= 3 loops=  2000: max overtakes      4 (2(N-1) =  4), max wait    0.36 ms, time 0.004 s
+  sem lifo lock ns  N= 3 loops= 20000: max overtakes      4 (2(N-1) =  4), max wait    3.90 ms, time 0.071 s
+  sem lifo lock ns  N= 4 loops=  2000: max overtakes      6 (2(N-1) =  6), max wait    1.95 ms, time 0.025 s
+  sem lifo lock ns  N= 4 loops= 20000: max overtakes      6 (2(N-1) =  6), max wait    1.25 ms, time 0.202 s
+  sem lifo lock ns  N= 8 loops=  2000: max overtakes     14 (2(N-1) = 14), max wait    2.32 ms, time 0.412 s
+  sem lifo lock ns  N= 8 loops= 20000: max overtakes     14 (2(N-1) = 14), max wait    9.31 ms, time 7.428 s
+  sem lifo lock ns  N=16 loops=  2000: max overtakes     18 (2(N-1) = 30), max wait    1.91 ms, time 1.724 s
+  sem lifo lock ns  N=16 loops= 20000: max overtakes     29 (2(N-1) = 30), max wait   91.44 ms, time 21.357 s
+  sem lifo lock sem N= 2 loops=  2000: max overtakes     24 (2(N-1) =  2), max wait    0.26 ms, time 0.096 s
+  sem lifo lock sem N= 2 loops= 20000: max overtakes    234 (2(N-1) =  2), max wait    0.74 ms, time 0.976 s
+  sem lifo lock sem N= 3 loops=  2000: max overtakes   3998 (2(N-1) =  4), max wait  100.43 ms, time 0.101 s
+  sem lifo lock sem N= 3 loops= 20000: max overtakes  17170 (2(N-1) =  4), max wait  440.93 ms, time 1.495 s
+  sem lifo lock sem N= 4 loops=  2000: max overtakes   5258 (2(N-1) =  6), max wait  136.48 ms, time 0.165 s
+  sem lifo lock sem N= 4 loops= 20000: max overtakes  54029 (2(N-1) =  6), max wait 1387.57 ms, time 1.679 s
+  sem lifo lock sem N= 8 loops=  2000: max overtakes  12876 (2(N-1) = 14), max wait  327.26 ms, time 0.385 s
+  sem lifo lock sem N= 8 loops= 20000: max overtakes 127995 (2(N-1) = 14), max wait 4068.85 ms, time 4.864 s
+  sem lifo lock sem N=16 loops=  2000: max overtakes  29829 (2(N-1) = 30), max wait  851.69 ms, time 0.858 s
+  sem lifo lock sem N=16 loops= 20000: max overtakes 297753 (2(N-1) = 30), max wait 8355.59 ms, time 8.473 s
+  sem zem  lock ns  N= 2 loops=  2000: max overtakes      2 (2(N-1) =  2), max wait    0.29 ms, time 0.083 s
+  sem zem  lock ns  N= 2 loops= 20000: max overtakes      2 (2(N-1) =  2), max wait    1.26 ms, time 1.142 s
+  sem zem  lock ns  N= 3 loops=  2000: max overtakes      4 (2(N-1) =  4), max wait    1.30 ms, time 0.168 s
+  sem zem  lock ns  N= 3 loops= 20000: max overtakes      4 (2(N-1) =  4), max wait   45.13 ms, time 2.160 s
+  sem zem  lock ns  N= 4 loops=  2000: max overtakes      6 (2(N-1) =  6), max wait    0.56 ms, time 0.298 s
+  sem zem  lock ns  N= 4 loops= 20000: max overtakes      6 (2(N-1) =  6), max wait    4.29 ms, time 3.507 s
+  sem zem  lock ns  N= 8 loops=  2000: max overtakes     14 (2(N-1) = 14), max wait    1.07 ms, time 0.812 s
+  sem zem  lock ns  N= 8 loops= 20000: max overtakes     14 (2(N-1) = 14), max wait    4.19 ms, time 7.561 s
+  sem zem  lock ns  N=16 loops=  2000: max overtakes     30 (2(N-1) = 30), max wait    1.43 ms, time 1.560 s
+  sem zem  lock ns  N=16 loops= 20000: max overtakes     30 (2(N-1) = 30), max wait    6.37 ms, time 17.844 s
+  sem zem  lock sem N= 2 loops=  2000: max overtakes    574 (2(N-1) =  2), max wait    0.12 ms, time 0.001 s
+  sem zem  lock sem N= 2 loops= 20000: max overtakes    907 (2(N-1) =  2), max wait    0.18 ms, time 0.008 s
+  sem zem  lock sem N= 3 loops=  2000: max overtakes   3202 (2(N-1) =  4), max wait    0.48 ms, time 0.001 s
+  sem zem  lock sem N= 3 loops= 20000: max overtakes   3955 (2(N-1) =  4), max wait    1.62 ms, time 0.023 s
+  sem zem  lock sem N= 4 loops=  2000: max overtakes   2265 (2(N-1) =  6), max wait    1.16 ms, time 0.004 s
+  sem zem  lock sem N= 4 loops= 20000: max overtakes   6724 (2(N-1) =  6), max wait    0.97 ms, time 0.034 s
+  sem zem  lock sem N= 8 loops=  2000: max overtakes   4460 (2(N-1) = 14), max wait    2.57 ms, time 0.009 s
+  sem zem  lock sem N= 8 loops= 20000: max overtakes  11197 (2(N-1) = 14), max wait    4.63 ms, time 0.102 s
+  sem zem  lock sem N=16 loops=  2000: max overtakes  10460 (2(N-1) = 30), max wait    6.57 ms, time 0.020 s
+  sem zem  lock sem N=16 loops= 20000: max overtakes  22775 (2(N-1) = 30), max wait   17.67 ms, time 0.257 s

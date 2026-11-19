@@ -1,0 +1,77 @@
+== Q9: -c, 20 runs each: runs where some vector is not uniform, and runs
+   that end with v[0] = v[1] = all zeros (impossible for whole vector adds)
+  vector-global-order          -n 2 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 2 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 4 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 4 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 8 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 8 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 2 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 2 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 4 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 4 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 8 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-global-order          -n 8 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 2 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 2 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 4 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 4 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 8 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 8 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 2 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 2 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 4 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 4 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 8 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait              -n 8 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 2 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 2 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 4 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 4 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 8 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 8 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 2 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 2 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 4 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 4 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 8 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-try-wait-block        -n 8 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 2 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 2 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 4 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 4 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 8 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 8 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 2 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 2 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 4 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 4 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 8 -l   1000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-avoid-hold-and-wait   -n 8 -l 100000 -d :  0/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 2 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 2 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 4 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 4 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 8 -l   1000    :  0/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 8 -l 100000    :  0/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 2 -l   1000 -d : 20/20 not uniform,  0/20 all zeros
+  vector-nolock                -n 2 -l 100000 -d : 11/20 not uniform, 14/20 all zeros
+  vector-nolock                -n 4 -l   1000 -d : 20/20 not uniform,  2/20 all zeros
+  vector-nolock                -n 4 -l 100000 -d :  0/20 not uniform, 20/20 all zeros
+  vector-nolock                -n 8 -l   1000 -d : 20/20 not uniform,  8/20 all zeros
+  vector-nolock                -n 8 -l 100000 -d :  0/20 not uniform, 20/20 all zeros
+== Q10: all versions  (median of 5 runs, seconds; -l 100000)
+  flags: -d
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0040    0.0124    0.0546    0.1500    0.2788
+    vector-try-wait                 0.0043    0.0114    0.2621    0.4045    1.7211
+    vector-try-wait-block           0.0053    0.0172    0.0495    0.2553    0.7658
+    vector-avoid-hold-and-wait      0.0047    0.0249    0.0788    0.1255    0.2562
+    vector-nolock                   0.0144    0.0321    0.1066    0.1717    0.3451
+  flags: -d -p
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0044    0.0050    0.0079    0.0143    0.0230
+    vector-try-wait                 0.0050    0.0055    0.0086    0.0140    0.0257
+    vector-try-wait-block           0.0053    0.0054    0.0089    0.0151    0.0283
+    vector-avoid-hold-and-wait      0.0070    0.0164    0.0343    0.0654    0.1238
+    vector-nolock                   0.0166    0.0184    0.0180    0.0365    0.0722

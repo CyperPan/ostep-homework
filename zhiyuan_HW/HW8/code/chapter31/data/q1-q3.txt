@@ -1,0 +1,29 @@
+== Q1 fork-join
+  parent: begin | child | parent: end (1.00 s; the child sleeps 1 s)
+  fork-join        : child printed before 'parent: end' in 10/10 runs
+  fork-join-broken : child printed before 'parent: end' in 0/10 runs
+== Q2 rendezvous (argument: which child sleeps 1 s before arriving)
+  arg 0: 500/500 runs correct; e.g. child 1: before | child 2: before | child 2: after | child 1: after
+  arg 1: 5/5 runs correct; e.g. child 2: before | child 1: before | child 1: after | child 2: after
+  arg 2: 5/5 runs correct; e.g. child 1: before | child 2: before | child 2: after | child 1: after
+== Q3 barrier (BARRIER_SLEEP_US: random delay before arriving)
+  barrier        N= 1 sleep<   0us: 200/200 correct
+  barrier        N= 1 sleep<2000us: 200/200 correct
+  barrier        N= 2 sleep<   0us: 200/200 correct
+  barrier        N= 2 sleep<2000us: 200/200 correct
+  barrier        N= 5 sleep<   0us: 200/200 correct
+  barrier        N= 5 sleep<2000us: 200/200 correct
+  barrier        N=10 sleep<   0us: 200/200 correct
+  barrier        N=10 sleep<2000us: 200/200 correct
+  barrier        N=50 sleep<   0us: 200/200 correct
+  barrier        N=50 sleep<2000us: 200/200 correct
+  barrier-broken N= 1 sleep<   0us: 200/200 correct
+  barrier-broken N= 1 sleep<2000us: 200/200 correct
+  barrier-broken N= 2 sleep<   0us:  20/200 correct
+  barrier-broken N= 2 sleep<2000us: 200/200 correct
+  barrier-broken N= 5 sleep<   0us:   0/200 correct
+  barrier-broken N= 5 sleep<2000us: 200/200 correct
+  barrier-broken N=10 sleep<   0us:   0/200 correct
+  barrier-broken N=10 sleep<2000us: 184/200 correct
+  barrier-broken N=50 sleep<   0us:   0/200 correct
+  barrier-broken N=50 sleep<2000us:   0/200 correct

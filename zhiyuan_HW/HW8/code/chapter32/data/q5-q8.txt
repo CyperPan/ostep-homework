@@ -1,0 +1,44 @@
+== Q5: vector-global-order -t -n 2 -l 100000 -d: 0.0145 s
+  loops (n = 2, -d):
+    -l 100000: 0.0129 s
+    -l 200000: 0.0243 s
+    -l 400000: 0.0478 s
+    -l 800000: 0.1238 s
+== Q5: threads  (median of 5 runs, seconds; -l 100000)
+  flags: -d
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0047    0.0123    0.0481    0.1296    0.2361
+== Q6: -p  (median of 5 runs, seconds; -l 100000)
+  flags: -d
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0044    0.0136    0.0475    0.1304    0.2572
+  flags: -d -p
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0046    0.0048    0.0109    0.0190    0.0299
+== Q7: try-wait retries (median of 5 runs, -l 100000)
+  -d    vector-try-wait        n=1: 0.0067s/0  n=2: 0.0184s/32877  n=4: 0.2701s/1850549  n=8: 0.1855s/1489205  n=16: 1.9619s/16954192
+  -d    vector-try-wait-block  n=1: 0.0045s/0  n=2: 0.0157s/2529  n=4: 0.0448s/96594  n=8: 0.2436s/2807023  n=16: 0.7670s/8041968
+  -d -p vector-try-wait        n=1: 0.0045s/0  n=2: 0.0051s/0  n=4: 0.0083s/0  n=8: 0.0128s/0  n=16: 0.0233s/0
+  -d -p vector-try-wait-block  n=1: 0.0044s/0  n=2: 0.0045s/0  n=4: 0.0079s/0  n=8: 0.0125s/0  n=16: 0.0248s/0
+== Q7: try-wait vs global order  (median of 5 runs, seconds; -l 100000)
+  flags: -d
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0043    0.0120    0.0487    0.1338    0.2511
+    vector-try-wait                 0.0052    0.0113    0.2765    0.2838    2.0036
+    vector-try-wait-block           0.0046    0.0177    0.0537    0.2834    0.7718
+  flags: -d -p
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0043    0.0043    0.0074    0.0123    0.0239
+    vector-try-wait                 0.0049    0.0048    0.0083    0.0129    0.0248
+    vector-try-wait-block           0.0050    0.0048    0.0086    0.0139    0.0253
+== Q8: avoid-hold-and-wait  (median of 5 runs, seconds; -l 100000)
+  flags: -d
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0049    0.0137    0.0525    0.1240    0.2392
+    vector-try-wait                 0.0048    0.0106    0.2619    0.1843    1.5442
+    vector-avoid-hold-and-wait      0.0059    0.0361    0.1016    0.1796    0.3341
+  flags: -d -p
+    program                       n=1       n=2       n=4       n=8       n=16    
+    vector-global-order             0.0042    0.0048    0.0076    0.0123    0.0240
+    vector-try-wait                 0.0047    0.0054    0.0084    0.0136    0.0247
+    vector-avoid-hold-and-wait      0.0055    0.0145    0.0304    0.0610    0.1135

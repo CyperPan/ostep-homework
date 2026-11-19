@@ -1,0 +1,51 @@
+== Q1: vector-deadlock -n 2 -l 1 -v, 200 runs: distinct outputs
+  176 runs:
+    ->add(0, 1)
+    <-add(0, 1)
+                  ->add(0, 1)
+                  <-add(0, 1)
+   22 runs:
+                  ->add(0, 1)
+                  <-add(0, 1)
+    ->add(0, 1)
+    <-add(0, 1)
+    1 runs:
+    ->add(0, 1)
+                  ->add(0, 1)
+    <-add(0, 1)
+                  <-add(0, 1)
+    1 runs:
+                  ->add(0, 1)
+    ->add(0, 1)
+                  <-add(0, 1)
+    <-add(0, 1)
+== Q2: vector-deadlock -n 2 -d -l L: runs that deadlock
+  -l      1:   0/50 deadlocked
+  -l     10:   1/50 deadlocked
+  -l    100:   2/50 deadlocked
+  -l   1000:  16/50 deadlocked
+  -l  10000:  49/50 deadlocked
+  -l 100000:  50/50 deadlocked
+== Q3: vector-deadlock -d -n N: runs that deadlock
+  -l     1 -n  1:   0/20 deadlocked
+  -l     1 -n  2:   1/20 deadlocked
+  -l     1 -n  3:   0/20 deadlocked
+  -l     1 -n  4:   0/20 deadlocked
+  -l     1 -n  8:   0/20 deadlocked
+  -l     1 -n 16:   0/20 deadlocked
+  -l     1 -n 32:   0/20 deadlocked
+  -l   100 -n  1:   0/20 deadlocked
+  -l   100 -n  2:   1/20 deadlocked
+  -l   100 -n  3:   5/20 deadlocked
+  -l   100 -n  4:   5/20 deadlocked
+  -l   100 -n  8:  11/20 deadlocked
+  -l   100 -n 16:  11/20 deadlocked
+  -l   100 -n 32:  18/20 deadlocked
+  -l 10000 -n  1:   0/20 deadlocked
+  -l 10000 -n  2:  20/20 deadlocked
+  -l 10000 -n  3:  20/20 deadlocked
+  -l 10000 -n  4:  20/20 deadlocked
+  -l 10000 -n  8:  20/20 deadlocked
+  -l 10000 -n 16:  20/20 deadlocked
+  -l 10000 -n 32:  20/20 deadlocked
+  without -d, -n 8 -l 10000: 0 / 20 deadlocked
